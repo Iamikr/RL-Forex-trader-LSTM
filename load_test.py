@@ -1,9 +1,9 @@
 import numpy as np
 
-# import keras
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Flatten, CuDNNLSTM, LSTM
-from keras.optimizers import Adam
+# TensorFlow 2.x Keras API
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, LSTM
+from tensorflow.keras.optimizers import Adam
 
 # keras-rl agent
 from rl.agents.dqn import DQNAgent
@@ -52,7 +52,7 @@ def main():
     dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=200,
                    enable_dueling_network=True, dueling_type='avg', target_model_update=1e-2, policy=policy,
                    processor=NormalizerProcessor())
-    dqn.compile(Adam(lr=1e-3), metrics=['mae'])
+    dqn.compile(Adam(learning_rate=1e-3), metrics=['mae'])
 
     ### now only test
     dqn.load_weights("./model/duel__LSTM_dqn_OHLCV-v0_weights_1083LS_15_22_0.08602019548898943.h5f")

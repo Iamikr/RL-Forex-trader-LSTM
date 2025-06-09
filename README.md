@@ -1,10 +1,10 @@
-# Duel DQN RL-Forex-trader-LSTM using keras-rl
+# Duel DQN RL-Forex-trader-LSTM using keras-rl2
 Deep LSTM Duel DQN Reinforcement Learning Forex EUR/USD Trader
 
 This repo contains 
 1. Trading environment(OpenAI Gym) for Forex currency trading(EUR/USD)  
 2. Duel Deep Q Network
-Agent is implemented using `keras-rl`(https://github.com/keras-rl/keras-rl) But has modified its core.py file in 'rl'.
+Agent is implemented using `keras-rl2`(https://github.com/wau/keras-rl2) but has modified its core.py file in `rl`.
   
 Agent is expected to learn useful action sequences to maximize profit in a given environment.  
 Environment limits agent to either buy, sell, hold stock(coin) at each step.  
@@ -36,7 +36,7 @@ The EUR/USD data used to train:
 
 ### Prerequisites
 
-keras-rl, numpy, tensorflow ... etc
+keras-rl2, TensorFlow 2.x, numpy, pandas ... etc
 
 ```python
 pip install -r requirements.txt
